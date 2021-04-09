@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Finite Differences Method for determining the order of a polynomial.</title>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Finite Differences Method for determining the order of a polynomial.</title>
 	<!-- 
 		This page creates a dataset that is generated from a set list of family functions (linear, quadratic, cubic, quartic, and exponential). The parameters are randomized so that each click through yields different results. 
 
 		The user is tasked with finding the family of functions that best describes the data provided. The suggested method is via "finite differences". 
 
 	-->
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <script src="script.js"></script>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
 	<p>Press the button below to get your random dataset.</p>
 
-<button onclick="myFunction()" id="button">Get Random Dataset</button>
+	<button onClick="myFunction()" id="button">Get Random Dataset</button>
 <br><br>
 
 <table>
@@ -60,5 +62,23 @@
 		<input type="radio" id="exponential" value="3" onClick="checkAnswer(3)"> Exponential
 	</form>
 </div>
+
+<!-- It's a modal! -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close" onClick="spanFunc()">&times;</span>
+      <h2>Correct!</h2>
+    </div>
+    <div class="modal-body">
+      <p>You must have done something right! Or, you guessed. Which would be a bummer.</p>
+    </div>
+    
+  </div>
+
+</div>
+
+<script src="script.js">
+</script>
   </body>
 </html>
