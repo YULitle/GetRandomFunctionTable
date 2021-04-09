@@ -1,4 +1,7 @@
 var t;
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("button");
+var span = document.getElementsByClassName("close")[0];
 
 function getRand(a,b){
 	return n = Math.floor((Math.random()*(b-a+1)+a));
@@ -6,7 +9,6 @@ function getRand(a,b){
 
 function myFunction() {
   // var name = prompt("What's your name?");
-  document.getElementById("choices").hidden = false;
   var x = getRand(2,12);
   t = getRand(1,5)
   if (t == 1){
@@ -72,7 +74,7 @@ function myFunction() {
 	  var y6 = e*(x+5)**4+a*(x+5)**3+b*(x+5)**2+c*(x+5)+d;
 	  // document.getElementById("name").innerHTML = "Quartic";
   }
-  console.log(t);
+  document.getElementById("choices").hidden = false;
   document.getElementById("x1").innerHTML = x;
   document.getElementById("x2").innerHTML = x+1;
   document.getElementById("x3").innerHTML = x+2;
@@ -91,7 +93,8 @@ function myFunction() {
 
 function checkAnswer(n){
 	if (t == n) {
-		alert("Correct!");
+		document.getElementById("choices").hidden = false;
+  		modal.style.display = "block"
 		document.getElementById("linear").checked = false;
 		document.getElementById("quadratic").checked = false;
 		document.getElementById("exponential").checked = false;
@@ -116,4 +119,14 @@ function checkAnswer(n){
 		alert("Nope...");
 	}
 	
+}
+
+function spanFunc(){
+	modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
