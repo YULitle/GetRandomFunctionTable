@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Finite Differences Method for determining the order of a polynomial.</title>
+	<!-- 
+		This page creates a dataset that is generated from a set list of family functions (linear, quadratic, cubic, quartic, and exponential). The parameters are randomized so that each click through yields different results. 
+
+		The user is tasked with finding the family of functions that best describes the data provided. The suggested method is via "finite differences". 
+
+	-->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="script.js"></script>
+	<p>Press the button below to get your random dataset.</p>
+
+<button onclick="myFunction()" id="button">Get Random Dataset</button>
+<br><br>
+
+<table>
+	<thead>
+		<th>x</th>
+		<th>y</th>
+	</thead>
+	<tr>
+		<td id="x1"></td>
+		<td id="y1"></td>
+	</tr>
+	<tr>
+		<td id="x2"></td>
+		<td id="y2"></td>
+	</tr>
+	<tr>
+		<td id="x3"></td>
+		<td id="y3"></td>
+	</tr>
+	<tr>
+		<td id="x4"></td>
+		<td id="y4"></td>
+	</tr>
+	<tr>
+		<td id="x5"></td>
+		<td id="y5"></td>
+	</tr>
+	<tr>
+		<td id="x6"></td>
+		<td id="y6"></td>
+	</tr>
+</table>
+<p id="name"></p>
+
+<div id="choices" hidden=TRUE>
+	<form>
+		<input type="radio" id="linear" value="1" onClick="checkAnswer(1)"> Linear <br>
+		<input type="radio" id="quadratic" value="2" onClick="checkAnswer(2)"> Quadratic <br>
+		<input type="radio" id="cubic" value="4" onClick="checkAnswer(4)"> Cubic <br>
+		<input type="radio" id="quartic" value="5" onClick="checkAnswer(5)"> Quartic <br>
+		<input type="radio" id="exponential" value="3" onClick="checkAnswer(3)"> Exponential
+	</form>
+</div>
+  </body>
+</html>
