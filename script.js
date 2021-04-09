@@ -11,7 +11,7 @@ function myFunction() {
   t = getRand(1,5)
   if (t == 1){
 	  // This is the linear one
-	  m=getRand(-10,10);
+	  do {m=getRand(-10,10);} while (m==0);
 	  b=getRand(3,23);
 	  var y1 = m*x+b;
 	  var y2 = m*(x+1)+b;
