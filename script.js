@@ -10,7 +10,7 @@ function getRand(a,b){
 function myFunction() {
   // var name = prompt("What's your name?");
   var x = getRand(2,12);
-  t = getRand(1,5)
+  t = getRand(1,5);
   if (t == 1){
 	  // This is the linear one
 	  do {m=getRand(-10,10);} while (m==0);
@@ -115,8 +115,9 @@ function checkAnswer(n){
   		document.getElementById("y5").innerHTML = "";
   		document.getElementById("y6").innerHTML = "";
 		document.getElementById("name").innerHTML = "";
+		document.getElementById("debug").innerHTML = t + " and " + n;
 	} else {
-		alert("Nope...");
+		alert("Nope " + t);
 	}
 	
 }
